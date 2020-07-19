@@ -1,10 +1,21 @@
 <h1>Posts</h1>
 
 
-<% @posts.each do |post|%>
-    <%=post.title%>
-    <%=post.image%>
-    <%=post.content%>
+<table class="table mt-5">
+    <tr>
+    <th> Titulo del Post</th>
+    <th>Imagen del Post</th>
+    <th>Contenido del post</th>
+    <th>Fecha de Creacion</th>
+    </tr>
 
-<% end%>
+    <% @posts.each do |post|%>
+    <tr>
+        <td><%=post.title%></td> 
+        <td><%=post.image%></td> 
+        <td><%=post.content%></td> 
+        <td><%=post.created_at%></td>
+    </tr>
+    <% end%>
 
+</table>
